@@ -18,12 +18,12 @@ li.title{
 div.name{
     margin-left: 10ch;
 }
-li.moves-title{
+li.abilities, li.moves{
     justify-content: center;
     padding: 12px;
 }
-li.moves{
-    justify-content: space-between;
+li.ability, li.move{
+    justify-content: space-around;
     padding: 12px;
 }
 img{
