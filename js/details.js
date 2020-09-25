@@ -1,0 +1,1 @@
+// requisição individual, de acordo com o id do pokemon

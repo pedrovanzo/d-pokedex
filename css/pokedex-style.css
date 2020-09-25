@@ -1,13 +1,5 @@
-*{
-    margin: 0;
-    padding: 0;
-
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
-}
-
 #root{
+    margin: 12px;
     border: 0px solid green;
     display: flex;
     flex-wrap: wrap;
@@ -20,12 +12,18 @@
     flex-shrink: 0;
     align-items: center;
     justify-content: space-between;
-    padding: 12px;
+    padding: 5px 12px;
+}
+#root >li.pokedex-arrow{
+    justify-content: flex-end;
+}
+.pokedex-title{
+    font-size: 1.5em;
 }
 .pokedex-thumb{
     border: 0px solid yellow;
     width: 60px;
 }
-.pokedex-arrow{
+.pokedex-arrow-img{
     width: 40px;
 }
