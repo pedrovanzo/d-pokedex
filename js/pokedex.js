@@ -22,7 +22,7 @@ xhttp.onreadystatechange = function() {
 
       // Pega o id de cada pokemon
       let pokeId = pokedexObj.results[i].url.split('/');
-      console.log(pokeId[6]);
+      // console.log(pokeId[6]);
 
 
       // Cria li
@@ -61,7 +61,14 @@ xhttp.onreadystatechange = function() {
       var divSeta = document.createElement("div");
       // Cria anchor
       var anchor = document.createElement("a");
-      anchor.href = "https://pokeapi.co/api/v2/pokemon/" + pokeId[6];
+      anchor.href = "./details.html";
+      
+      // console.log(pokeId[6]);
+      
+      anchor.href = "./details.html" + "?id=" + pokeId[6];
+
+      // anchor.href = "https://pokeapi.co/api/v2/pokemon/" + pokeId[6];
+
       // anchor.href = pokedexObj.results[i].url;
       // Cria img seta
       var anchorImg = document.createElement("img");
