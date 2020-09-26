@@ -52,7 +52,7 @@ xhttp.onreadystatechange = function() {
       var divTitle = document.createElement("div");
       divTitle.classList.add("pokedex-title");
       // Cria o conteudo da div
-      titleContent = document.createTextNode(pokedexObj.results[i].name);
+      titleContent = document.createTextNode(pokedexObj.results[i].name.charAt(0).toUpperCase() + pokedexObj.results[i].name.slice(1));
       // Insere no DOM
       divTitle.appendChild(titleContent);
       li.appendChild(divTitle);
@@ -74,7 +74,7 @@ xhttp.onreadystatechange = function() {
       var anchorImg = document.createElement("img");
       anchorImg.setAttribute(
         "src",
-        "https://png.pngtree.com/png-clipart/20190705/original/pngtree-vector-right-arrow-icon-png-image_4224405.jpg"
+        "./assets/img/arrow.png"
       );
       anchorImg.classList.add("pokedex-arrow-img");
       // Insere no DOM
@@ -87,6 +87,8 @@ xhttp.onreadystatechange = function() {
 xhttp.open(
   "GET",
   "https://pokeapi.co/api/v2/pokemon?limit=100&offset=200",
+  // Make a different folder with 1gen pokemon VVV
+  // "https://pokeapi.co/api/v2/pokemon?limit=151",
   true
 );
 xhttp.send();
