@@ -9,7 +9,13 @@
     font-size: 1em;
     font-family: 'Quicksand', sans-serif;
 }
+a{
+    color: #fff;
+    text-decoration: underline;
+    /* text-shadow: 0 0 0; */
+}
 
 body{
     padding: 0 12px;
+    background-color: #ff3333;
 }

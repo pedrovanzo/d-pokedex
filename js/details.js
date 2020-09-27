@@ -19,13 +19,16 @@ xhttp.onreadystatechange = function() {
     // console.log(pokedexObj.name);
 
     let pokeLi = document.createElement("li");
-    pokeLi.innerText = pokedexObj.name;
+    // pokeLi.innerText = pokedexObj.name.charAt(0).toUpperCase() + pokedexObj.name.slice(1);
     // document.getElementById("root").appendChild(pokeLi);
 
     //name
-    document.getElementById("name").innerHTML = pokedexObj.name;
+    document.getElementById("name").innerHTML = pokedexObj.name.charAt(0).toUpperCase() + pokedexObj.name.slice(1);
+
+    //page title
+    document.title = pokedexObj.name.charAt(0).toUpperCase() + pokedexObj.name.slice(1);
     //img
-    document.getElementById("img").setAttribute("src", "https://pokeres.bastionbot.org/images/pokemon/" + pokemon + ".png");
+    document.getElementById("pokeImg").setAttribute("src", "https://pokeres.bastionbot.org/images/pokemon/" + pokemon + ".png");
     
     
     
@@ -89,3 +92,15 @@ xhttp.onreadystatechange = function() {
 };
 xhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/" + pokemon, true);
 xhttp.send();
+
+let pokemonNumber = parseInt(pokemon);
+function previousP(){
+    // console.log(pokemonNumber);
+    // console.log(pokemonNumber - 1);
+    window.location.replace("./details.html?id=" + (pokemonNumber - 1));
+}
+function nextP(){
+    // console.log(pokemonNumber);
+    // console.log(pokemonNumber + 1);
+    window.location.replace("./details.html?id=" + (pokemonNumber + 1));
+}

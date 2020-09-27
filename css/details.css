@@ -1,31 +1,118 @@
-#root{
-    margin: 12px;
-    border: 0px solid green;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+.main-title {
+  display: flex;
+  max-width: 600px;
+  margin: 6px 0 0 0;
+  padding: 6px 0;
+  border: 0px solid #fff;
+  text-align: left;
+
+  font-size: 1.5em;
+  color: #fff;
+  text-shadow: #000 -1px 1px 1px;
 }
-#root > li{
-    border: 1px dashed #ccc;
-    display: flex;
-    flex-basis: 100%;
-    flex-shrink: 0;
-    align-items: center;
+.main-title .img {
+  vertical-align: -webkit-baseline-middle;
+  vertical-align: middle;
+  /* width: 38px; */
+  height: 38px;
 }
-li.title{
-    justify-content: start;
+.main-title img {
+  /* width: 100%; */
+  height: 100%;
+  margin: 0 6px;
 }
-div.name{
-    margin-left: 10ch;
+.main-title div.text {
+  padding-top: 4px;
+  padding-left: 12px;
 }
-li.abilities, li.moves{
-    justify-content: center;
-    padding: 12px;
+#root {
+  background-color: white;
+  margin: 0 auto;
+  /* margin: 0 12px; */
+  border: 8px solid #4b4b4b;
+  border-radius: 12px;
+  display: flex;
+  max-width: 700px;
+  flex-basis: auto;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
-li.ability, li.move{
-    justify-content: space-around;
-    padding: 12px;
+#root > li {
+  /* border: 0px dashed #ccc; */
+  display: flex;
+  flex-basis: 100%;
+  flex-shrink: 0;
+  align-items: center;
 }
-img{
-    width: 40%;
+div.pokeImg{
+  width: 100%;
+  justify-content: center;
+}
+img#pokeImg {
+  width: 40%;
+  max-width: 200px;
+  max-height: 150px;
+  margin: 10px 0 0 0;
+}
+li.title {
+  width: 100%;
+  border: 0px solid red;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+div.name {
+  width: 100%;
+  border: 0px solid green;
+  /* margin-left: 2ch; */
+  padding: 20px 0;
+  font-size: 2em;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+li.abilities,
+li.moves {
+    font-size: 1.2em;
+    font-weight: 900;
+  justify-content: center;
+}
+li.ability,
+li.move {
+  justify-content: space-around;
+  padding: 12px;
+  flex-direction: column;
+  /* font-weight: 900; */
+}
+li.ability div,
+li.move div {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin: 2px;
+  padding: 6px;
+  width: 100%;
+}
+ul.buttonUl{
+  display: flex;
+  flex-basis: 100%;
+  justify-content: space-evenly;
+}
+ul.buttonUl li{
+  width: 100%;
+  max-width: 800px;
+  border: 0px solid green;
+  text-align: center;
+}
+button {
+  background: #444;
+  cursor: pointer;
+  color: #fff;
+  text-shadow: #000 0px 3px 2px;
+  font-weight: 900;
+  font-size: 1.2em;
+  border: 3px solid #2b2b2b;
+  border-radius: 8px;
+  margin: 8px;
+  padding: 5px 10px;
+  width: 40%;
+  max-width: 600px;
 }

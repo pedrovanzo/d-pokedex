@@ -9,16 +9,22 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/details.css">
     <link rel="shortcut icon" href="assets/img/pokeball.png" type="image/x-icon">
-    <title>Pokedex Details</title>
+    <title>MissingNo</title>
 </head>
 
 <body>
-    <h1>
-        <a href="pokedex.html">Voltar</a>
-    </h1>
+    <div class="main-title">
+        <div class="img">
+            <img src="assets/img/pokeball.png" alt="">
+        </div>
+        <div class="text">
+            <a href="pokedex.html">Back</a>
+        </div>
+    </div>
     <ul id="root">
-        <li class="title"><img src="assets/img/missingno.png" alt="" id="img">
-            <div id="name" class="name">Steelix</div>
+        <li class="title">
+            <div class="pokeImg"><img src="assets/img/missingno.png" alt="" id="pokeImg"></div>
+            <div id="name" class="name">MissingNo</div>
         </li>
         <li class="abilities">abilities</li>
         <li id="ability" class="ability"></li>
@@ -26,6 +32,27 @@
         <li id="move" class="move">
         </li>
     </ul>
+    <ul class="buttonUl">
+        <li>
+            <button id="previousPokemon" onclick="previousP()">&lt;&lt;&nbsp;&nbsp;&nbsp;&nbsp;Previous</button>
+            <button id="nextPokemon" onclick="nextP()">Next&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;</button>
+        </li>
+    </ul>
+
+    <p>
+        if((pokemonNumber - 1) &lt; this.generation.start){ dont go to previous pokemon }<br>
+        if((pokemonNumber + 1) &gt; this.generation.end){ dont go to next pokemon }
+    </p>
+    <p>
+        Insert page with Custom random team selector (To use in PokemonShowdown)
+    </p>
+    <p>
+        Known bugs => { Pokemon gets duplicated attacks }<br>
+        Known bugs => { onClick(previous, next) loads pokemon outside offset200 }
+    </p>
+    <p>
+        make scrollable screen for pokedex and details
+    </p>
     <script src="js/details.js"></script>
 </body>
 

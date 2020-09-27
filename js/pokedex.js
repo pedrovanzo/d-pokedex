@@ -92,5 +92,3 @@ xhttp.open(
   true
 );
 xhttp.send();
-
-// MAKE REQUEST FOR SPECIFIC POKEMON
