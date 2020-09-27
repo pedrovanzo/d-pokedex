@@ -12,35 +12,25 @@
     <title>Pokedex</title>
 </head>
 
-<body>
-    <div class="main-title">
-        <div class="img">
-            <img src="assets/img/pokeball.png" alt="">
+<body onload="loadPokedex(80)">
+    <div class="main-title collapsible">
+        <div class="img text">
+            <img src="assets/img/pokeball.png" alt="" style="vertical-align: middle;">Pokedex <span id="symbol">&#9660;</span>
         </div>
-        <div class="text">
-            Pokedex
+        <div id="content">
+            <div onclick="loadPokedex(1)">Generation 1</div>
+            <div onclick="loadPokedex(2)">Generation 2</div>
+            <div onclick="loadPokedex(3)">Generation 3</div>
+            <div onclick="fakeSignOut()">Exit</div>
         </div>
     </div>
-    
+
     <ul id="root"></ul>
     <div class="main-title">
-        <div class="img">
-            <img src="assets/img/github.png" alt="">
-        </div>
-        <div class="text">
-            github.com/pedrovanzo
+        <div class="img text">
+            <img src="assets/img/github.png" alt="">github.com/pedrovanzo
         </div>
     </div>
-    <h1 style="font-size: 2em;">
-        <p>
-            expand to include all different generations
-        </p>
-        <p>
-            gen[4].offset = totalPokemon - (gen[1].count, gen[2].count, gen[3].count);
-            gen[i] = totalPokemon - (
-            for(let y = 0; y < y-1; y++){subtract(gen[y])} );
-        </p>
-    </h1>
     <script src="js/pokedex.js"></script>
 </body>
 
