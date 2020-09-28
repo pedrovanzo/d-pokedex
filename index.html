@@ -8,18 +8,26 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/signin.css">
     <link rel="shortcut icon" href="https://image.flaticon.com/icons/png/128/280/280898.png" type="image/x-icon">
-    <title>Pokedex Login</title>
+    <title>Pokedex</title>
 </head>
 
 <body>
     <div class="coverImg">
-        <img src="assets/img/pokedex-cover.png"
-            alt="">
+        <img src="assets/img/pokedex-cover.png" alt="">
     </div>
     <div id="root">
-        <input type="text" name="email" label="Email" placeholder="exemplo@email.com">
-        <input type="password" name="password" label="Password" placeholder="*********">
+        <input type="text" name="email" label="Email" placeholder="exemplo@email.com" class="inputText">
+        <input type="password" name="password" label="Password" placeholder="*********" class="inputText">
+        <div class="signInOptions">
+            <div class="accountOptions">
+                <input type="checkbox" checked>&nbsp;Remember me<br /><br />
+                <a href="#">Forgot password</a>
+            </div>
+        </div>
         <button onclick="fakeSignIn()">Sign In</button>
+        <div>
+
+        </div>
     </div>
     <script>
         function fakeSignIn() {

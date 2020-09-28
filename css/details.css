@@ -39,7 +39,8 @@
   max-width: 700px;
   flex-basis: auto;
   flex-wrap: wrap;
-  flex-direction: row;
+  /* flex-direction: row; */
+  flex-direction: column;
 }
 #root > li {
   /* border: 0px dashed #ccc; */
@@ -53,10 +54,10 @@ div.pokeImg{
   justify-content: center;
 }
 img#pokeImg {
-  width: 40%;
+  width: auto;
   max-width: 200px;
   max-height: 150px;
-  margin: 10px 0 0 0;
+  margin: 15px 0 0 0;
 }
 li.title {
   width: 100%;
