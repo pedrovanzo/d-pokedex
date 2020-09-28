@@ -1,26 +1,24 @@
 .main-title {
   display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin: 6px 0;
-    padding: 6px 0;
-    border: 0px solid #fff;
-    text-align: left;
+  flex-direction: column;
+  max-width: 685px;
+  margin: 6px auto;
+  padding: 6px 0;
+  border: 0px solid #fff;
+  text-align: left;
 
-    font-size: 1.5em;
-    color: #fff;
-    text-shadow: #000 -1px 1px 1px;
+  font-size: 1.5em;
+  color: #fff;
+  text-shadow: #000 -1px 1px 1px;
 
-    justify-content: start;
+  justify-content: start;
 }
 .main-title .img {
-  /* width: 38px; */
   height: 38px;
 }
 .main-title img {
-  /* width: 100%; */
   height: 100%;
-  margin: 0 6px;
+  margin: 0 16px 0 6px;
   vertical-align: -webkit-baseline-middle;
   vertical-align: middle;
   padding-bottom: 2px;
@@ -32,24 +30,21 @@
 #root {
   background-color: white;
   margin: 0 auto;
-  /* margin: 0 12px; */
   border: 8px solid #4b4b4b;
   border-radius: 12px;
   display: flex;
   max-width: 700px;
   flex-basis: auto;
   flex-wrap: wrap;
-  /* flex-direction: row; */
   flex-direction: column;
 }
 #root > li {
-  /* border: 0px dashed #ccc; */
   display: flex;
   flex-basis: 100%;
   flex-shrink: 0;
   align-items: center;
 }
-div.pokeImg{
+div.pokeImg {
   width: 100%;
   justify-content: center;
 }
@@ -69,7 +64,6 @@ li.title {
 div.name {
   width: 100%;
   border: 0px solid green;
-  /* margin-left: 2ch; */
   padding: 20px 0;
   font-size: 2em;
   font-weight: 400;
@@ -77,8 +71,8 @@ div.name {
 }
 li.abilities,
 li.moves {
-    font-size: 1.2em;
-    font-weight: 900;
+  font-size: 1.2em;
+  font-weight: 900;
   justify-content: center;
 }
 li.ability,
@@ -86,7 +80,6 @@ li.move {
   justify-content: space-around;
   padding: 12px;
   flex-direction: column;
-  /* font-weight: 900; */
 }
 li.ability div,
 li.move div {
@@ -96,12 +89,12 @@ li.move div {
   padding: 6px;
   width: 100%;
 }
-ul.buttonUl{
+ul.buttonUl {
   display: flex;
   flex-basis: 100%;
   justify-content: space-evenly;
 }
-ul.buttonUl li{
+ul.buttonUl li {
   width: 100%;
   max-width: 800px;
   border: 0px solid green;

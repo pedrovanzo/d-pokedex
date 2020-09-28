@@ -101,7 +101,7 @@ function loadPokedex(gen) {
   );
   xhttp.send();
 }
-// Escolher gerações
+// Menu colapsado
 let coll = document.getElementsByClassName("collapsible");
 let i;
 for (i = 0; i < coll.length; i++) {

@@ -1,11 +1,11 @@
-// requisição individual, de acordo com o id do pokemon
+// Usando uma expressão regular para separar o id do pokemon
 let pokemon = document.location.search.replace(/^.*?\=/, "");
 // console.log(pokemon);
 
 // Objeto Pokedex
 let pokedexObj = new Object();
 
-// Requisição Ajax Pokedex
+// Requisição Ajax Pokedex usando id do pokemon escolhido
 let xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
   // Variavel para manipular o DOM
@@ -18,18 +18,14 @@ xhttp.onreadystatechange = function() {
     // console.log(pokedexObj);
     // console.log(pokedexObj.name);
 
-    let pokeLi = document.createElement("li");
-    // pokeLi.innerText = pokedexObj.name.charAt(0).toUpperCase() + pokedexObj.name.slice(1);
-    // document.getElementById("root").appendChild(pokeLi);
-
-    //name
+    // Nome do pokemon com inicial maiúscula
     document.getElementById("name").innerHTML =
       pokedexObj.name.charAt(0).toUpperCase() + pokedexObj.name.slice(1);
 
-    //page title
+    // Altera o título da página para nome do pokemon
     document.title =
       pokedexObj.name.charAt(0).toUpperCase() + pokedexObj.name.slice(1);
-    //img
+    // Insere imagem do pokemon no elemento
     document
       .getElementById("pokeImg")
       .setAttribute(
@@ -37,10 +33,9 @@ xhttp.onreadystatechange = function() {
         "https://pokeres.bastionbot.org/images/pokemon/" + pokemon + ".png"
       );
 
-    // habilidades
-    console.log(pokedexObj.abilities);
+    // Contando quantas habilidades o pokemon tem
     abilityCount = Object.keys(pokedexObj.abilities);
-    console.log(abilityCount.length);
+    // Montando a lista de habilidades de acordo com a quantidade
     if (abilityCount.length > 1) {
       if (abilityCount.length < 4) {
         for (let i = 0; i < abilityCount.length; i++) {
@@ -50,11 +45,8 @@ xhttp.onreadystatechange = function() {
         }
       } else {
         for (let i = 0; i < 4; i++) {
-          // console.log(pokedexObj.moves[i].move);
-          // console.log(pokedexObj.moves[i].move.name);
           let abDiv = document.createElement("div");
-          // moveDiv.innerHTML = pokedexObj.moves[i].move.name;
-          // insere 4 ataques aleatorios da lista de ataques
+          // Insere 4 habilidades aleatorias
           abDiv.innerHTML =
             pokedexObj.abilities[
               Math.floor(Math.random() * (abilityCount.length - 1)) + 1
@@ -63,27 +55,28 @@ xhttp.onreadystatechange = function() {
         }
       }
     } else {
+      // Caso tenha uma ou nenhuma
       let abDiv = document.createElement("div");
       // console.log('igual ou menor que 1');
-      console.log(pokedexObj.abilities[0].ability.name);
+      // console.log(pokedexObj.abilities[0].ability.name);
 
       abDiv.innerHTML = pokedexObj.abilities[0].ability.name;
       document.getElementById("ability").appendChild(abDiv);
     }
 
-    //moves => for loop to go through moves list, adding 4 moves (maybe random)
+    // Contando quantos ataques o pokemon tem
     // console.log(pokedexObj.moves)
     let movesCount = Object.keys(pokedexObj.moves);
-    console.log(movesCount.length);
-    // corrige se o pokemon tiver só um ataque
+    // console.log(movesCount.length);
+    // Montando a lista de ataques de acordo com a quantidade
     if (movesCount.length > 1) {
-      console.log("maior que 1");
+      // console.log("maior que 1");
       for (let i = 0; i < 4; i++) {
         // console.log(pokedexObj.moves[i].move);
         // console.log(pokedexObj.moves[i].move.name);
         let moveDiv = document.createElement("div");
         // moveDiv.innerHTML = pokedexObj.moves[i].move.name;
-        // insere 4 ataques aleatorios da lista de ataques
+        // Insere 4 ataques aleatorios
         moveDiv.innerHTML =
           pokedexObj.moves[
             Math.floor(Math.random() * (movesCount.length - 1)) + 1
@@ -91,6 +84,7 @@ xhttp.onreadystatechange = function() {
         document.getElementById("move").appendChild(moveDiv);
       }
     } else {
+      // Caso tenha um ou nenhum
       let moveDiv = document.createElement("div");
       // console.log('igual ou menor que 1');
       moveDiv.innerHTML = pokedexObj.moves[0].move.name;
@@ -98,15 +92,19 @@ xhttp.onreadystatechange = function() {
     }
   }
 };
+// Ajax
 xhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/" + pokemon, true);
 xhttp.send();
 
+// Convertendo id para int
 let pokemonNumber = parseInt(pokemon);
+// Função para pokemon anterior
 function previousP() {
   // console.log(pokemonNumber);
   // console.log(pokemonNumber - 1);
   window.location.replace("./details.html?id=" + (pokemonNumber - 1));
 }
+// Função para proximo pokemon
 function nextP() {
   // console.log(pokemonNumber);
   // console.log(pokemonNumber + 1);

@@ -11,42 +11,35 @@
     <link rel="shortcut icon" href="assets/img/pokeball.png" type="image/x-icon">
     <title>MissingNo</title>
 </head>
-
 <body>
+    <!-- Div - Navegação -->
     <div class="main-title text">
         <div class="img">
             <img src="assets/img/pokeball.png" alt=""><a href="pokedex.html">Back</a>
         </div>
     </div>
+    <!-- Ul - Pokemon (id via URL) -->
     <ul id="root">
         <li class="title">
             <div class="pokeImg"><img src="assets/img/missingno.png" alt="" id="pokeImg"></div>
             <div id="name" class="name">MissingNo</div>
         </li>
+        <!-- Habilidades do Pokemon -->
         <li class="abilities">abilities</li>
         <li id="ability" class="ability"></li>
+        <!-- Ataques do Pokemon (Limitado a 4 aleatorios) -->
         <li class="moves">moves</li>
         <li id="move" class="move">
         </li>
     </ul>
+    <!-- Mudar Pokemon (id+1 ou id-1) -->
     <ul class="buttonUl">
         <li>
             <button id="previousPokemon" onclick="previousP()">&lt;&lt;&nbsp;&nbsp;Previous</button>
             <button id="nextPokemon" onclick="nextP()">Next&nbsp;&nbsp;&gt;&gt;</button>
         </li>
     </ul>
-
-    <p style="margin-top: 10px;">
-        if((pokemonNumber - 1) &lt; this.generation.start){ dont go to previous pokemon }<br>
-        if((pokemonNumber + 1) &gt; this.generation.end){ dont go to next pokemon }
-    </p>
-    <p>
-        Insert page with Custom random team selector (To use in PokemonShowdown)
-    </p>
-    <p>
-        Known bugs => { Pokemon gets duplicated attacks }<br>
-        Known bugs => { onClick(previous, next) loads pokemon outside offset200 }
-    </p>
+    <!-- Script - Detalhes -->
     <script src="js/details.js"></script>
 </body>
 
