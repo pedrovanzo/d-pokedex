@@ -12,3 +12,6 @@
 - https://www.youtube.com/watch?v=GNZg1KRsWuU
 - https://lage.us/Javascript-Pass-Variables-to-Another-Page.html
 - https://stackoverflow.com/questions/42853028/removing-li-from-ul-in-for-loop-js/42853087
+
+### Observações:
+Responsivo, porem feito pensando em telas mobile primariamente;
