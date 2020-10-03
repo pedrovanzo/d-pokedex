@@ -85,6 +85,11 @@ button{
   background-color: #4b4b4b;
   color: #fff;
 }
+div.buttonContainer{
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
 h1{
   width: 100%;
   text-align: center;

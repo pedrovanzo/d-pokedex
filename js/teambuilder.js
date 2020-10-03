@@ -1,5 +1,16 @@
-function randomPokemon() {
-  // THIS IS ALL THAT IS NECESSARY
+function buildTeam(gen) {
+  // Limpando a pokedex para mudar de geração
+  let ul = document.getElementById("root");
+  let listLength = ul.children.length;
+  for (i = 0; i < listLength; i++) {
+    ul.removeChild(ul.children[0]);
+  }
+  for (let i = 1; i < 7; i++) {
+    let newPokeUl = document.createElement("ul");
+    ul.appendChild(newPokeUl);
+    newPokeUl.setAttribute("id", "pokemon" + i);
+  }
+  // Loop para todos os pokemon
   for (let i = 1; i < 7; i++) {
     // Sixth Pokemon
     let xhttp6 = new XMLHttpRequest();
@@ -40,10 +51,28 @@ function randomPokemon() {
         }
       }
     };
+    let randomPokemon6;
+    switch (gen) {
+      case 1:
+        console.log("1st gen");
+        randomPokemon6 = Math.floor(Math.random() * (151 - 1) + 1);
+        break;
+      case 2:
+        console.log("2nd gen");
+        randomPokemon6 = Math.floor(Math.random() * (251 - 151) + 151);
+        break;
+      case 3:
+        console.log("3rd gen");
+        randomPokemon6 = Math.floor(Math.random() * (386 - 251) + 251);
+        break;
+      default:
+        console.log("1st gen");
+        randomPokemon6 = Math.floor(Math.random() * (151 - 1) + 1);
+    }
 
     // Ajax
-    let randomPokemon6 = Math.floor(Math.random() * (151 - 1) + 1);
-    // console.log(randomPokemon6);
+    // let randomPokemon6 = Math.floor(Math.random() * (151 - 1) + 1);
+    console.log(randomPokemon6);
     xhttp6.open(
       "GET",
       "https://pokeapi.co/api/v2/pokemon/" + randomPokemon6,
@@ -51,13 +80,6 @@ function randomPokemon() {
     );
     xhttp6.send();
   }
-}
-
-function buildTeam() {
-  randomPokemon();
-}
-function reloadPrototype() {
-  window.location.reload();
 }
 
 function copyTeamToClipboard() {

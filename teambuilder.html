@@ -21,16 +21,13 @@
         </div>
     </div>
     <h1>Team Generator Prototype 01</h1>
-    <button onclick="reloadPrototype()">Generate New Team (Gen 1)</button>
-    <button onclick="copyTeamToClipboard()">Copy Text</button>
-    <ul id="root">
-        <ul id="pokemon1"></ul><br>
-        <ul id="pokemon2"></ul><br>
-        <ul id="pokemon3"></ul><br>
-        <ul id="pokemon4"></ul><br>
-        <ul id="pokemon5"></ul><br>
-        <ul id="pokemon6"></ul>
-    </ul>
+    <div class="buttonContainer">
+        <button onclick="buildTeam(1)">Generate New Team (Gen 1)</button>
+        <button onclick="buildTeam(2)">Generate New Team (Gen 2)</button>
+        <button onclick="buildTeam(3)">Generate New Team (Gen 3)</button>
+        <button onclick="copyTeamToClipboard()">Copy Text</button>
+    </div>
+    <ul id="root"></ul>
     <!-- Script - Teambuilder -->
     <script src="js/teambuilder.js"></script>
 </body>
