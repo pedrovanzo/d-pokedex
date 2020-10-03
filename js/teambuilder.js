@@ -7,9 +7,10 @@ function randomPokemon() {
       if (this.readyState == 4 && this.status == 200) {
         // console.log(this.responseText);
         let pokePrototype = JSON.parse(this.responseText);
-        console.log(pokePrototype.name);
+        // console.log(pokePrototype.name);
         let li = document.createElement("li");
-        li.setAttribute("id", pokePrototype.name);
+        let liId = pokePrototype.name + i;
+        li.setAttribute("id", liId);
         li.innerText =
           pokePrototype.name.charAt(0).toUpperCase() +
           pokePrototype.name.slice(1);
@@ -28,14 +29,14 @@ function randomPokemon() {
               pokePrototype.moves[
                 Math.floor(Math.random() * (movesCount - 1)) + 1
               ].move.name;
-            console.log(moveDiv);
-            document.getElementById(pokePrototype.name).appendChild(moveDiv);
+            // console.log(moveDiv);
+            document.getElementById(liId).appendChild(moveDiv);
           }
         } else {
           // Caso tenha um ou nenhum
           let moveDiv = document.createElement("div");
           moveDiv.innerHTML = "- " + pokePrototype.moves[0].move.name;
-          document.getElementById(pokePrototype.name).appendChild(moveDiv);
+          document.getElementById(liId).appendChild(moveDiv);
         }
       }
     };
@@ -57,4 +58,10 @@ function buildTeam() {
 }
 function reloadPrototype() {
   window.location.reload();
+}
+
+function copyTeamToClipboard() {
+  let copyText = document.getElementById("root").innerText;
+  navigator.clipboard.writeText(copyText);
+  console.log(copyText);
 }

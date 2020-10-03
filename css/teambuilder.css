@@ -77,6 +77,19 @@
   cursor: pointer;
 }
 button{
+  margin: 10px 0;
   padding: 5px 18px;
-  border-radius: 50px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  width: 100%;
+  background-color: #4b4b4b;
+  color: #fff;
+}
+h1{
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.4em;
 }
