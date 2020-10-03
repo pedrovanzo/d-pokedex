@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/teambuilder.css">
+    <link rel="shortcut icon" href="assets/img/pokeball.png" type="image/x-icon">
+    <title>Teambuilder Generator</title>
+</head>
+<!-- Carrega a Pokedex ao carregar a página -->
+
+<body onload="buildTeam()">
+    <!-- Div - Navegação -->
+    <div class="main-title collapsible">
+        <div class="img text">
+            <img src="assets/img/pokeball.png" alt="">Pokedex <span id="symbol">&#9660;</span>
+        </div>
+    </div>
+    <h1>Team Generator Prototype 01</h1>
+    <ul id="root">
+        <ul id="pokemon1"></ul>
+        <br>
+        <ul id="pokemon2"></ul>
+        <br>
+        <ul id="pokemon3"></ul>
+        <br>
+        <ul id="pokemon4"></ul>
+        <br>
+        <ul id="pokemon5"></ul>
+        <br>
+        <ul id="pokemon6"></ul>
+        <li><button onclick="reloadPrototype()">Generate New Team (Gen 1)</button></li>
+        <li><button onclick="copyToClipboard()">Copy Text</button></li>
+    </ul>
+    <!-- Script - Teambuilder -->
+    <script src="js/teambuilder.js"></script>
+</body>
+
+</html>

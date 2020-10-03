@@ -1,0 +1,82 @@
+.main-title {
+  display: flex;
+  flex-direction: column;
+  max-width: 685px;
+  margin: 6px auto;
+  padding: 6px 0;
+  border: 0px solid #fff;
+  text-align: left;
+
+  font-size: 1.5em;
+  color: #fff;
+  text-shadow: #000 -1px 1px 1px;
+
+  justify-content: start;
+}
+.main-title .img {
+  height: 38px;
+}
+.main-title img {
+  height: 100%;
+  margin: 0 16px 0 6px;
+  vertical-align: -webkit-baseline-middle;
+  vertical-align: middle;
+  padding-bottom: 2px;
+}
+.main-title div.text {
+  padding-top: 4px;
+  cursor: pointer;
+}
+#symbol {
+  font-size: 0.6em;
+}
+#root {
+  background-color: white;
+  margin: 0 auto;
+  border: 8px solid #4b4b4b;
+  border-radius: 12px;
+  display: flex;
+  max-width: 700px;
+  flex-basis: auto;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+#root > li, #root > ul > li {
+  border: 0px dashed #ccc;
+  border-bottom: 1px solid #ccc;
+  display: block;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+}
+#root > li > div{
+    width: 100%;
+}
+#root > li.pokedex-arrow {
+  justify-content: flex-end;
+}
+.pokedex-title {
+  font-size: 1.5em;
+}
+.pokedex-thumb {
+  border: 0px solid yellow;
+  width: 60px;
+}
+.pokedex-arrow-img {
+  width: 40px;
+}
+#content {
+  font-size: 0.8em;
+  border: 0px solid blue;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+#content > div {
+  margin: 40px 0;
+  cursor: pointer;
+}
+button{
+  padding: 5px 18px;
+  border-radius: 50px;
+}
