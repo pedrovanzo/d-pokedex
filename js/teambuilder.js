@@ -9,6 +9,8 @@ function buildTeam(gen) {
     let newPokeUl = document.createElement("ul");
     ul.appendChild(newPokeUl);
     newPokeUl.setAttribute("id", "pokemon" + i);
+    let lineBreak = document.createElement("br");
+    ul.appendChild(lineBreak);
   }
   // Loop para todos os pokemon
   for (let i = 1; i < 7; i++) {
